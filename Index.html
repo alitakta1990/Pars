@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پروتئین پارس | Premium Protein</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Vazirmatn,sans-serif;background:#0b0b0b;color:#f5f0e5;overflow-x:hidden}
+:root{--gold:#d6b46a;--gold2:#f2d99b;--black:#0b0b0b;--panel:#171717;--muted:#aaa}
+header{height:78px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:#080808;border-bottom:1px solid #d6b46a35;position:sticky;top:0;z-index:20}
+.logo{font-size:23px;font-weight:900;color:var(--gold)}
+.logo small{display:block;text-align:center;font-size:9px;letter-spacing:4px;color:#aaa}
+nav{display:flex;gap:25px}
+nav a{color:#ddd;text-decoration:none;font-size:12px;transition:.3s}
+nav a:hover{color:var(--gold)}
+.headbtn{background:var(--gold);color:#111;padding:11px 20px;text-decoration:none;font-size:12px;font-weight:900;border-radius:3px}
+.hero{min-height:600px;padding:70px 9%;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,#080808f5 5%,#080808b8 50%,#08080835 100%),url('https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1600') center/cover}
+.hero-content{max-width:600px;position:relative;z-index:1}
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;margin-bottom:23px}
+.hero h1{font-size:55px;line-height:1.6;font-weight:900}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:14px;line-height:2.5;color:#d1d1d1;margin-top:18px;max-width:480px}
+.actions{display:grid;grid-template-columns:repeat(2,minmax(0,190px));align-items:center;gap:12px;margin-top:30px;max-width:392px}
+.btn{min-height:50px;padding:12px 10px;text-decoration:none;font-size:12px;font-weight:800;transition:.3s;display:flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;line-height:1.8;border-radius:3px}
+.gold{background:var(--gold);color:#111}
+.outline{border:1px solid var(--gold);color:var(--gold)}
+.btn:hover{transform:translateY(-4px);background:var(--gold2);color:#111}
+.strip{background:#171717;padding:25px 6%;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:15px;border-top:1px solid #d6b46a40;border-bottom:1px solid #d6b46a40}
+.strip div{border-left:1px solid #ffffff20}
+.strip div:last-child{border:0}
+.strip strong{display:block;font-size:14px;color:var(--gold)}
+.strip span{font-size:10px;color:#bbb}
+.section{padding:85px 8%}
+.title{text-align:center;margin-bottom:42px}
+.title small{color:var(--gold);letter-spacing:3px;font-size:10px}
+.title h2{font-size:30px;margin:12px 0;color:var(--gold2)}
+.title p{font-size:12px;color:var(--muted)}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{height:260px;position:relative;overflow:hidden;border:1px solid #d6b46a40}
+.cat img{width:100%;height:100%;object-fit:cover;transition:.6s;filter:brightness(.72)}
+.cat:hover img{transform:scale(1.12);filter:brightness(.95)}
+.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,#050505e8)}
+.cat div{position:absolute;bottom:20px;right:19px;z-index:2}
+.cat small{color:var(--gold);font-size:10px}
+.cat h3{font-size:18px;margin-top:5px}
+.products-section{background:#121212;border-top:1px solid #ffffff0c;border-bottom:1px solid #ffffff0c}
+.filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-bottom:35px}
+.filters button{background:transparent;color:#bbb;border:1px solid #65532f;padding:10px 21px;font-family:inherit;font-size:11px;cursor:pointer;transition:.3s}
+.filters button.active,.filters button:hover{background:var(--gold);border-color:var(--gold);color:#111}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.card{background:#1b1b1b;border:1px solid #ffffff12;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-8px);border-color:var(--gold)}
+.card-img{height:205px;position:relative;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .card-img img{transform:scale(1.08)}
+.badge{position:absolute;top:13px;right:13px;background:var(--gold);color:#111;padding:6px 11px;font-size:10px;font-weight:900}
+.info{padding:18px}
+.info h3{font-size:15px;color:#f5e9ce}
+.info p{font-size:11px;color:#aaa;line-height:2;margin-top:8px}
+.price{color:var(--gold);font-size:13px;font-weight:800;margin-top:13px}
+.price small{font-size:10px;color:#aaa;font-weight:400}
+.order{display:block;text-align:center;padding:11px;background:var(--gold);color:#111;text-decoration:none;font-size:11px;font-weight:900;margin-top:15px;transition:.3s}
+.order:hover{background:var(--gold2)}
+.featured{display:grid;grid-template-columns:1fr 1fr;background:#171717;border:1px solid #d6b46a55;min-height:360px}
+.featured img{width:100%;height:100%;min-height:360px;object-fit:cover}
+.featured-text{padding:50px;display:flex;flex-direction:column;justify-content:center}
+.featured-text small{color:var(--gold);letter-spacing:2px}
+.featured-text h2{font-size:29px;margin:15px 0;line-height:1.8;color:var(--gold2)}
+.featured-text p{font-size:12px;line-height:2.5;color:#bbb}
+.contact{text-align:center;padding:80px 20px;background:linear-gradient(#080808e8,#080808ed),url('https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=1200') center/cover}
+.contact h2{font-size:29px;color:var(--gold)}
+.contact p{font-size:13px;color:#ddd;margin-top:15px;line-height:2.5}
+footer{background:#050505;border-top:1px solid #d6b46a45;text-align:center;padding:35px 15px;color:#999;font-size:11px;line-height:2.5}
+footer strong{color:var(--gold);font-size:21px}
+@media(max-width:800px){
+header{height:68px;padding:0 5%}
+nav{display:none}
+.hero{min-height:510px;padding:55px 7%;background-position:58%}
+.hero h1{font-size:38px}
+.strip{grid-template-columns:repeat(2,1fr);gap:20px}
+.strip div:nth-child(2){border:0}
+.section{padding:60px 5%}
+.categories{grid-template-columns:repeat(2,1fr);gap:11px}
+.cat{height:190px}
+.products{grid-template-columns:repeat(2,1fr);gap:12px}
+.card-img{height:150px}
+.featured{grid-template-columns:1fr}
+.featured img{height:230px;min-height:230px}
+.featured-text{padding:30px}
+.title h2{font-size:25px}
+}
+@media(max-width:480px){
+.actions{grid-template-columns:1fr 1fr;gap:8px;width:100%;max-width:100%}
+.actions .btn{width:100%;padding:10px 4px;font-size:10px;min-height:48px;white-space:normal}
+.hero h1{font-size:36px}
+}
+@media(max-width:360px){
+.products{grid-template-columns:1fr}
+.hero h1{font-size:32px}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">پروتئین پارس<small>PARSPROTEIN</small></div>
+<nav>
+<a href="#home">صفحه اصلی</a>
+<a href="#categories">دسته‌بندی</a>
+<a href="#products">محصولات</a>
+<a href="#contact">تماس با ما</a>
+</nav>
+<a href="#contact" class="headbtn">ارتباط با ما</a>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="eyebrow">✦ PREMIUM QUALITY ✦</div>
+<h1>کیفیت در اوج<br><span>تازگی و اصالت</span></h1>
+<p>به دنیای محصولات پروتئینی خوش آمدید. تجربه‌ای متفاوت از انتخاب محصولات باکیفیت، برای کسانی که بهترین‌ها را انتخاب می‌کنند.</p>
+<div class="actions">
+<a href="#products" class="btn gold">مشاهده محصولات ←</a>
+<a href="#contact" class="btn outline">تماس با فروشگاه</a>
+</div>
+</div>
+</section>
+
+<div class="strip">
+<div><strong>🥩 کیفیت منتخب</strong><span>توجه به کیفیت محصولات</span></div>
+<div><strong>❄️ نگهداری مناسب</strong><span>توجه به شرایط نگهداری</span></div>
+<div><strong>✦ تنوع محصولات</strong><span>انتخاب‌های متنوع</span></div>
+<div><strong>🛒 خرید آسان</strong><span>ارتباط با فروشگاه</span></div>
+</div>
+
+<section class="section" id="categories">
+<div class="title">
+<small>EXPLORE COLLECTION</small>
+<h2>دنیای محصولات پروتئینی</h2>
+<p>انتخابی برای هر سلیقه و هر سفره</p>
+</div>
+<div class="categories">
+<img src="images/beef1.jpg" alt="گوشت قرمز تازه">
+<div class="cat"><img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=600" alt="مرغ"><div><small>02 / CHICKEN</small><h3>مرغ و ماکیان</h3></div></div>
+<div class="cat"><img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600" alt="ماهی"><div><small>03 / SEAFOOD</small><h3>ماهی و دریایی</h3></div></div>
+<div class="cat"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="محصولات"><div><small>04 / SPECIAL</small><h3>محصولات ویژه</h3></div></div>
+</div>
+</section>
+
+<section class="section products-section" id="products">
+<div class="title">
+<small>OUR PRODUCTS</small>
+<h2>محصولات منتخب</h2>
+<p>کیفیت را در انتخاب تجربه کنید</p>
+</div>
+<div class="filters">
+<button class="active" onclick="filterProducts('all',this)">همه</button>
+<button onclick="filterProducts('meat',this)">گوشت</button>
+<button onclick="filterProducts('chicken',this)">مرغ</button>
+<button onclick="filterProducts('fish',this)">ماهی</button>
+<button onclick="filterProducts('other',this)">سایر</button>
+</div>
+<div class="products">
+<div class="card" data-type="meat">
+<div class="card-img"><img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=600" alt="گوشت گوسفندی"><span class="badge">منتخب</span></div>
+<div class="info"><h3>گوشت گوسفندی</h3><p>مناسب غذاهای اصیل ایرانی</p><div class="price">قیمت روز <small>تومان / کیلو</small></div><a href="#contact" class="order">استعلام قیمت ←</a></div>
+</div>
+<div class="card" data-type="chicken">
+<div class="card-img"><img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=600" alt="مرغ"><span class="badge">تازه</span></div>
+<div class="info"><h3>مرغ تازه</h3><p>مناسب وعده‌های غذایی خانواده</p><div class="price">قیمت روز <small>تومان / کیلو</small></div><a href="#contact" class="order">استعلام قیمت ←</a></div>
+</div>
+<div class="card" data-type="fish">
+<div class="card-img"><img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600" alt="ماهی"></div>
+<div class="info"><h3>ماهی تازه</h3><p>تنوعی از محصولات دریایی</p><div class="price">قیمت روز <small>تومان / کیلو</small></div><a href="#contact" class="order">استعلام قیمت ←</a></div>
+</div>
+<div class="card" data-type="other">
+<div class="card-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="محصولات فرآوری شده"></div>
+<div class="info"><h3>محصولات فرآوری‌شده</h3><p>تنوعی از محصولات پروتئینی</p><div class="price">قیمت روز <small>بسته‌ای</small></div><a href="#contact" class="order">استعلام قیمت ←</a></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="featured">
+<img src="https://images.unsplash.com/photo-1558030006-450675393462?w=900" alt="استیک">
+<div class="featured-text">
+<small>THE ART OF QUALITY</small>
+<h2>کیفیت، یک انتخاب نیست؛ یک استاندارد است.</h2>
+<p>در پروتئین پارس، هدف ما ارائه تجربه‌ای متفاوت از انتخاب و خرید محصولات پروتئینی است.</p>
+<a href="#contact" class="btn gold">ارتباط با فروشگاه</a>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>تجربه یک انتخاب متفاوت</h2>
+<p>برای اطلاع از قیمت روز، موجودی و ثبت سفارش با فروشگاه در ارتباط باشید.</p>
+<a href="#products" class="btn gold">مشاهده محصولات</a>
+</section>
+
+<footer>
+<strong>پروتئین پارس</strong>
+<br>طراحی و توسعه وب‌سایت
+<br>تمامی حقوق محفوظ است.
+</footer>
+
+<script>
+function filterProducts(type,button){
+document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+button.classList.add('active');
+document.querySelectorAll('.card').forEach(card=>{
+card.style.display=(type==='all'||card.dataset.type===type)?'block':'none';
+});
+}
+</script>
+</body>
+</html>
